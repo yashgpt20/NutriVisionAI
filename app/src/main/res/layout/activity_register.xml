@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/splash"
+    tools:context=".ui.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/logo3"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="35dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/head3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello! Register to get started"
+            android:textStyle="normal"
+            android:fontFamily="@font/montserratlalternate_bold"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/logo3"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"/>
+
+        <EditText
+            android:id="@+id/email1"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/head3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/outline"
+            android:hint="Email"
+            android:textSize="20sp"
+            android:padding="18dp"
+            android:textStyle="normal"
+            android:fontFamily="@font/montserratalternates_regular"
+            android:textColor="#E8E9EB"
+            android:textColorHint="#E8E9EB"
+            android:backgroundTint="#494358"
+            android:inputType="textEmailAddress"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password2InputLayout"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/email1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/white">
+
+            <EditText
+                android:id="@+id/password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline"
+                android:hint="Password"
+                android:textSize="20sp"
+                android:padding="18dp"
+                android:textStyle="normal"
+                android:fontFamily="@font/montserratalternates_regular"
+                android:textColor="#E8E9EB"
+                android:textColorHint="#E8E9EB"
+                android:backgroundTint="#494358"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cnfpasswordInputLayout"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/password2InputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/white">
+
+            <EditText
+                android:id="@+id/cnfpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline"
+                android:hint="Confirm Password"
+                android:textSize="20sp"
+                android:padding="18dp"
+                android:textStyle="normal"
+                android:fontFamily="@font/montserratalternates_regular"
+                android:textColor="#E8E9EB"
+                android:textColorHint="#E8E9EB"
+                android:backgroundTint="#494358"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/registerbtn2"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:text="Register"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:fontFamily="@font/montserratlalternate_bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cnfpasswordInputLayout"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/white"/>
+
+        <TextView
+            android:id="@+id/l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            app:layout_constraintTop_toBottomOf="@+id/registerbtn2"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratlalternate_bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

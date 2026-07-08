@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/dash"
+    tools:context=".ui.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/logo5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Profile"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:fontFamily="@font/montserratlalternate_bold"
+            app:layout_constraintTop_toBottomOf="@+id/logo5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratlalternate_bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/profileTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/profileName"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/outline"
+            android:padding="18dp"
+            android:hint="Name"
+            android:fontFamily="@font/montserratalternates_regular"
+            android:textSize="20sp"
+            android:textColor="#E8E9EB"
+            android:textColorHint="#E8E9EB"
+            android:backgroundTint="#494358"
+            android:inputType="textPersonName"
+            android:focusable="false"
+            android:clickable="false"/>
+
+        <TextView
+            android:id="@+id/ageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratlalternate_bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/profileName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/profileAge"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ageLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/outline"
+            android:padding="18dp"
+            android:hint="Age"
+            android:fontFamily="@font/montserratalternates_regular"
+            android:textSize="20sp"
+            android:textColor="#E8E9EB"
+            android:textColorHint="#E8E9EB"
+            android:backgroundTint="#494358"
+            android:inputType="number"
+            android:focusable="false"
+            android:clickable="false"/>
+
+        <TextView
+            android:id="@+id/weightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight:"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratlalternate_bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/profileAge"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/profileWeight"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/weightLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/outline"
+            android:padding="18dp"
+            android:hint="Weight"
+            android:fontFamily="@font/montserratalternates_regular"
+            android:textSize="20sp"
+            android:textColor="#E8E9EB"
+            android:textColorHint="#E8E9EB"
+            android:backgroundTint="#494358"
+            android:inputType="numberDecimal"
+            android:focusable="false"
+            android:clickable="false"/>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:text="Logout"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:fontFamily="@font/montserratlalternate_bold"
+            android:textColor="#D32F2F"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileWeight"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/logo6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Analytics"
+            android:textSize="28sp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserratlalternate_bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:background="@drawable/summarybox"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorColor="@android:color/black"
+                app:trackColor="#E0E0E0"
+                app:indicatorSize="130dp"
+                app:trackThickness="12dp"
+                app:trackCornerRadius="6dp"
+                tools:progress="65"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/progressCalories"
+                app:layout_constraintBottom_toBottomOf="@id/progressCalories"
+                app:layout_constraintStart_toStartOf="@id/progressCalories"
+                app:layout_constraintEnd_toEndOf="@id/progressCalories">
+
+                <TextView
+                    android:id="@+id/tvTotalCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    tools:text="1450" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kcal"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- MACRO BARS -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp">
+
+            <!-- Protein Bar -->
+            <TextView
+                android:id="@+id/tvTotalProtein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                tools:text="Protein: 80g" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressProtein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
+                app:trackThickness="8dp"
+                app:trackCornerRadius="4dp"
+                app:indicatorColor="#FF5252"
+                app:trackColor="#FFCDD2"
+                tools:progress="60" />
+
+            <!-- Carbs Bar -->
+            <TextView
+                android:id="@+id/tvTotalCarbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                tools:text="Carbs: 150g" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressCarbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
+                app:trackThickness="8dp"
+                app:trackCornerRadius="4dp"
+                app:indicatorColor="#4CAF50"
+                app:trackColor="#C8E6C9"
+                tools:progress="45" />
+
+            <!-- Fats Bar -->
+            <TextView
+                android:id="@+id/tvTotalFats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                tools:text="Fats: 45g" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressFats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:trackThickness="8dp"
+                app:trackCornerRadius="4dp"
+                app:indicatorColor="#FFC107"
+                app:trackColor="#FFECB3"
+                tools:progress="70" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="AI Meal History"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:fontFamily="@font/montserratlalternate_bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/summarybox"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMealHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/items_meal" />
+
+    </LinearLayout>
+</LinearLayout>
